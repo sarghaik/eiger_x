@@ -1,0 +1,9 @@
+1. 2 possible versions can be served here
+    a. Provide separate ip for each gsite so their own domains can be connected to this. (Preffered)
+    b. Provide subdomains for each client and allow client to redirect from their domain to gplatform site with subdomain added. 
+
+2. Users table wont't continue to be unique only based on email. So here are also 2 possible scenarios:
+    a. Add company domain table or new table of user/company mapping so uniqueness of user could be itentifies by composition of email/company
+    b. Sharding to databases per company for each company (Preffered).
+
+3. Authentication will be held based on company and user data. Authentication token will be constructed using both user data and company data. 
